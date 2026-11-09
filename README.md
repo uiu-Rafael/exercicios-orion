@@ -232,3 +232,9 @@ docker compose down -v     # remove também os volumes (apaga os dados)
 | `port is already allocated` / porta 3000 em uso | Outro exercício está no ar. Rode `docker compose down` na pasta dele (ou `docker ps` para ver o que está ativo). |
 | A API reclama de conexão logo após o `up` | O banco ainda está iniciando. Aguarde alguns segundos e tente de novo. |
 | Live reload não dispara no Windows/macOS | O script de dev usa `nodemon -L` (polling) justamente para esse caso. Confirme que o volume `./api:/app` está montado. |
+
+## Fluxo de branches (Gitflow)
+
+- `prod`: referência de produção (só recebe PR vindo da `develop`)
+- `develop`: integração (todos os PRs vão para ela)
+- `feat/exercicios-docker`: branch de feature com os exercícios
