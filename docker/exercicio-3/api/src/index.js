@@ -56,4 +56,3 @@ app.get('/messages', async (req, res) => {
 initDb()
   .then(() => app.listen(3000, () => console.log('API na porta 3000')))
   .catch((e) => { console.error(e); process.exit(1); });
-  
